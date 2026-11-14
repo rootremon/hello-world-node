@@ -13,4 +13,4 @@ Buka http://localhost:3000
 
 ## Deploy
 
-Deploy otomatis ke Render (free tier) dari repo ini.
+Deploy otomatis ke Vercel (free tier) dari repo ini.
