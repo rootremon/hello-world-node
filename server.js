@@ -24,13 +24,17 @@ app.get('/', (req, res) => {
   <div class="card">
     <h1>Hello <span>World!</span></h1>
     <p>Website ini berjalan di <strong>Node.js + Express</strong>, dibuat dan di-deploy dari HP &mdash; tanpa PC, tanpa VPS.</p>
-    <div class="badge">Node.js &bull; Express &bull; GitHub &bull; Render</div>
+    <div class="badge">Node.js &bull; Express &bull; GitHub &bull; Vercel</div>
     <p style="margin-top:24px;font-size:0.95rem">Kode sumber: <a href="https://github.com/rootremon/hello-world-node">github.com/rootremon/hello-world-node</a></p>
   </div>
 </body>
 </html>`);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
